@@ -109,7 +109,7 @@ const run = (cmd, args, path = process.cwd()) =>
     });
 
 program.action(async () => {
-    const fullPath = path.join(process.cwd(), "test");
+    const fullPath = process.cwd();
 
     let answers;
 
@@ -142,13 +142,13 @@ program.action(async () => {
     try {
         await fs.outputFile(
             path.join(fullPath, ".eslintrc"),
-            JSON.stringify(eslint(language, react)),
+            JSON.stringify(eslint(language, react), undefined, 4),
             "utf-8"
         );
 
-        await fs.copy("./ignoreFiles", fullPath);
-        await fs.copy("./configFiles", fullPath);
-        await fs.copy("./otherFiles", fullPath);
+        await fs.copy(path.join(__dirname, "ignoreFiles"), fullPath);
+        await fs.copy(path.join(__dirname, "configFiles"), fullPath);
+        await fs.copy(path.join(__dirname, "otherFiles"), fullPath);
 
         await (pkgm === "npm"
             ? run("npm", ["install", "--save-dev", ...devDependencies], fullPath)

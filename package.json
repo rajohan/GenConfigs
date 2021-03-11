@@ -1,6 +1,6 @@
 {
     "name": "gen-configs",
-    "version": "1.0.0",
+    "version": "1.0.4",
     "description": "Generate configs for a project",
     "main": "./src/index.js",
     "author": "Raymond Johannessen <rajohan1@gmail.com>",

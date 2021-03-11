@@ -1,0 +1,22 @@
+{
+    "plugins": [
+        "stylelint-scss",
+        "stylelint-order",
+        "stylelint-no-unsupported-browser-features"
+    ],
+    "extends": [
+        "stylelint-config-standard",
+        "stylelint-config-rational-order",
+        "stylelint-config-prettier"
+    ],
+    "rules": {
+        "plugin/no-unsupported-browser-features": [
+            true,
+            {
+                "severity": "warning",
+                "ignore": ["flexbox"],
+                "ignorePartialSupport": true
+            }
+        ]
+    }
+}

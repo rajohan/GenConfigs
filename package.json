@@ -1,0 +1,24 @@
+{
+    "name": "gen-configs",
+    "version": "1.0.0",
+    "description": "Generate configs for a project",
+    "main": "./src/index.js",
+    "author": "Raymond Johannessen <rajohan1@gmail.com>",
+    "license": "MIT",
+    "bin": "./src/index.js",
+    "dependencies": {
+        "chalk": "^4.1.0",
+        "commander": "^7.1.0",
+        "cross-spawn": "^7.0.3",
+        "fs-extra": "^9.1.0",
+        "inquirer": "^8.0.0"
+    },
+    "devDependencies": {
+        "eslint": "^7.21.0",
+        "eslint-config-prettier": "^8.1.0",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-simple-import-sort": "^7.0.0",
+        "eslint-plugin-unicorn": "^28.0.2",
+        "prettier": "^2.2.1"
+    }
+}

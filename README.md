@@ -11,6 +11,7 @@ Auto generate configs for eslint, prettier, stylelint and adds ignore files.
 
 ###### All dependencies will be installed automatically and tsconfig.json is also created when TypeScript is selected.
 
+
 ## Available configs
 * JavaScript
 * TypeScript

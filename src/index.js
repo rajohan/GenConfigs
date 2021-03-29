@@ -33,7 +33,7 @@ const run = (cmd, args, path = process.cwd()) =>
     });
 
 program.action(async () => {
-    const fullPath = path.join(process.cwd(), "test");
+    const fullPath = process.cwd();
 
     let answers;
 

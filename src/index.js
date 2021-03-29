@@ -33,7 +33,7 @@ const run = (cmd, args, path = process.cwd()) =>
     });
 
 program.action(async () => {
-    const fullPath = process.cwd();
+    const fullPath = path.join(process.cwd(), "test");
 
     let answers;
 
@@ -72,8 +72,26 @@ program.action(async () => {
             );
         }
 
-        await fs.copy(path.join(__dirname, "ignoreFiles"), fullPath);
-        await fs.copy(path.join(__dirname, "configFiles"), fullPath);
+        await fs.copy(path.join(__dirname, "ignoreFiles"), fullPath, {
+            filter: (path) => {
+                if (!stylelint) {
+                    return !path.includes("stylelint");
+                }
+
+                return true;
+            },
+        });
+
+        await fs.copy(path.join(__dirname, "configFiles"), fullPath, {
+            filter: (path) => {
+                if (!stylelint) {
+                    return !path.includes("stylelint");
+                }
+
+                return true;
+            },
+        });
+
         await fs.copy(path.join(__dirname, "otherFiles"), fullPath);
 
         await (pkgm === "npm"

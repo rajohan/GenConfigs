@@ -1,6 +1,6 @@
 {
     "name": "gen-configs",
-    "version": "1.1.5",
+    "version": "1.1.6",
     "description": "Generate configs for a project",
     "author": {
         "name": "Raymond Johannessen",

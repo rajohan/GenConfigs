@@ -29,7 +29,7 @@ const tsconfig = (react, nextjs) => {
         };
 
         if (nextjs) {
-            config.include.push("next-env.d.ts", "**/*.ts", "**/*.tsx");
+            config.include = ["next-env.d.ts", "**/*.ts", "**/*.tsx"];
         }
     }
 

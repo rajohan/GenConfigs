@@ -2,12 +2,10 @@
 
 Auto generate configs for eslint, prettier, stylelint and adds ignore files.
 
----
-
 ### Usage
 > Run `npx gen-configs` in the projects root folder and follow the CLI steps.
 
-**Note:** All dependencies will be installed automatically and tsconfig.json is also created when TypeScript is selected.
+###### All dependencies will be installed automatically and tsconfig.json is also created when TypeScript is selected.
 
 ---
 

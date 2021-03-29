@@ -27,13 +27,20 @@ const questions = () =>
                 type: "confirm",
                 name: "react",
                 message: "Using react?",
-                default: false
+                default: false,
+            },
+            {
+                type: "confirm",
+                name: "nextjs",
+                message: "Using next.js?",
+                default: false,
+                when: (answers) => answers.react,
             },
             {
                 type: "confirm",
                 name: "stylelint",
                 message: "Want to use stylelint?",
-                default: false
+                default: false,
             },
         ])
         .catch((error) => console.log(error));
